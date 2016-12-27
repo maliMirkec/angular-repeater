@@ -1,0 +1,24 @@
+{
+  "name": "angular-repeater",
+  "version": "1.0.0",
+  "description": "Directive that could handle recursion.",
+  "main": "angular-repeater.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maliMirkec/angular-repeater.git"
+  },
+  "keywords": [
+    "angular",
+    "repeat",
+    "repeater"
+  ],
+  "author": "Silvestar Bistrovic <malimirkeccita@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/maliMirkec/angular-repeater/issues"
+  },
+  "homepage": "https://github.com/maliMirkec/angular-repeater#readme"
+}
