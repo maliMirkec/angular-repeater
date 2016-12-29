@@ -1,0 +1,28 @@
+<div>
+	<div ng-repeat="(objKey, objValue) in jsonData track by objKey" ng-init="lab = SetKey(objKey)">
+		<div ng-if="IsString(objValue) || IsBool(objValue)">
+			<div ng-if="label">
+				<textarea name="{{label}}[{{objKey}}]" value="{{objValue}}">{{objValue}}</textarea>
+			</div>
+			<div ng-if="!label">
+				<textarea name="{{objKey}}" value="{{objValue}}">{{objValue}}</textarea>
+			</div>
+		</div>
+		<div ng-if="IsArray(objValue)">
+			<div ng-init="counter = GetCounter(objValue)"></div>
+			<div ng-repeat="(obj1Key, obj1Value) in counter track by obj1Key">
+				<div ng-if="label">
+					<textarea name="{{label}}[{{objKey}}][]" value="{{objValue[obj1Key]}}">{{objValue[obj1Key]}}</textarea>
+				</div>
+				<div ng-if="!label">
+					<textarea name="{{objKey}}[]" value="{{objValue[obj1Key]}}">{{objValue[obj1Key]}}</textarea>
+				</div>
+			</div>
+		</div>
+		<div ng-if="IsObject(objValue)">
+			<div ng-repeat="(obj2Key, obj2Value) in objValue track by obj2Key">
+				<repeater json-data="obj2Value" label="objKey + '[' + obj2Key + ']'"></repeater>
+			</div>
+		</div>
+	</div>
+</div>

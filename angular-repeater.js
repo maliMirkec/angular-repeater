@@ -1,16 +1,17 @@
-angular.module('DREvents')
-.directive('repeater', ['RecursionHelper', function (RecursionHelper) {
+angular.module('Repeater', ['RecursionHelper'])
+.directive('recursiveRepeater', ['RecursionHelper', function (RecursionHelper) {
 	return {
 		restrict: 'E',
 		replace: true,
 		scope: {
-			obj: '=',
+			jsonData: '=',
 			label: '='
 		},
 		transclude: true,
-		templateUrl: '/Content/DynamicReports/templates/general/repeater.html',
+		templateUrl: './templates/repeater.html',
 		compile: function(element) {
 			return RecursionHelper.compile(element, function(scope, iElement, iAttrs, controller, transcludeFn){
+				console.log(scope.jsonData);
 				scope.IsObject = angular.isObject;
 				scope.IsString = angular.isString;
 				scope.IsArray = angular.isArray;

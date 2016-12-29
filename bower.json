@@ -20,5 +20,11 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "angular-recursion": "^1.0.5"
+  },
+  "devDependencies": {
+    "bootstrap": "v4.0.0-alpha.5"
+  }
 }
