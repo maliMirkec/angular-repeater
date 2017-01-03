@@ -57,8 +57,8 @@ angular.module('Repeater', ['RecursionHelper'])
 		templateUrl: './templates/repeater.html',
 		compile: function(element) {
 			return RecursionHelper.compile(element, function(scope, iElement, iAttrs, controller, transcludeFn){
-				console.log(scope.jsonData);
 				scope.IsObject = angular.isObject;
+				scope.IsNumber = angular.isNumber;
 				scope.IsString = angular.isString;
 				scope.IsArray = angular.isArray;
 
@@ -67,14 +67,6 @@ angular.module('Repeater', ['RecursionHelper'])
 				};
 
 				scope.IsBool = isBool;
-
-				var getCounter = function(arr) {
-					return arr.map(function(item, key) {
-						return key;
-					});
-				};
-
-				scope.GetCounter = getCounter;
             });
 		}
 	};
@@ -111,7 +103,7 @@ angular.module('Repeater', ['RecursionHelper'])
     		});
     	};
         
-        loadData('/demo/data/dummy.json')
+        loadData('/demo/data/dummy2.json')
         .then(function(data) {
             $scope.jsonData = data;
         });

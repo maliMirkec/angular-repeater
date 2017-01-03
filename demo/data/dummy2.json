@@ -1,4 +1,4 @@
-{
+[{
     "boolean-true": true,
     "boolean-false": false,
     "string": "This is string.",
@@ -25,4 +25,4 @@
         "label": "This is third label",
         "value": 300
     }]
-}
+}]

@@ -1,28 +1,15 @@
 <div>
-	<div ng-repeat="(objKey, objValue) in jsonData track by objKey" ng-init="lab = SetKey(objKey)">
-		<div ng-if="IsString(objValue) || IsBool(objValue)">
-			<div ng-if="label">
-				<textarea name="{{label}}[{{objKey}}]" value="{{objValue}}">{{objValue}}</textarea>
-			</div>
-			<div ng-if="!label">
-				<textarea name="{{objKey}}" value="{{objValue}}">{{objValue}}</textarea>
-			</div>
+	<div ng-if="IsString(jsonData) || IsBool(jsonData) || IsNumber(jsonData)">
+		<div class="form-group" ng-if="label">
+            <label>{{label}}</label>
+			<input class="form-control" type="text" name="{{label}}" value="{{jsonData}}">
 		</div>
-		<div ng-if="IsArray(objValue)">
-			<div ng-init="counter = GetCounter(objValue)"></div>
-			<div ng-repeat="(obj1Key, obj1Value) in counter track by obj1Key">
-				<div ng-if="label">
-					<textarea name="{{label}}[{{objKey}}][]" value="{{objValue[obj1Key]}}">{{objValue[obj1Key]}}</textarea>
-				</div>
-				<div ng-if="!label">
-					<textarea name="{{objKey}}[]" value="{{objValue[obj1Key]}}">{{objValue[obj1Key]}}</textarea>
-				</div>
-			</div>
-		</div>
-		<div ng-if="IsObject(objValue)">
-			<div ng-repeat="(obj2Key, obj2Value) in objValue track by obj2Key">
-				<repeater json-data="obj2Value" label="objKey + '[' + obj2Key + ']'"></repeater>
-			</div>
+	</div>
+	<div ng-if="IsObject(jsonData)">
+		<div ng-repeat="(objKey, objValue) in jsonData track by objKey">
+			<div ng-init="indexVar = (IsNumber(objKey) && (IsString(objValue) || IsBool(objValue) || IsNumber(objValue))) ? '' : objKey"></div>
+			<div ng-init="label2 = label.length > 0 ? label + '[' + indexVar + ']' : objKey"></div>
+			<recursive-repeater json-data="objValue" label="label2"></recursive-repeater>
 		</div>
 	</div>
 </div>

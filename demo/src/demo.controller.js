@@ -23,7 +23,7 @@
     		});
     	};
         
-        loadData('/demo/data/dummy.json')
+        loadData('/demo/data/dummy2.json')
         .then(function(data) {
             $scope.jsonData = data;
         });

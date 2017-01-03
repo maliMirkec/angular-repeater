@@ -8,15 +8,26 @@
     <title>Angular Repeater</title>
 </head>
 <body>
-    <div class="container py-1">
+    <div class="container py-1" ng-app="DemoApp" ng-controller="DemoController as Ctrl">
         <div class="row">
             <div class="col-xs-12">
-                <h1>Angular Repeater</h1>
-                <hr>
+                <h1 class="mb-2">Angular Repeater</h1>
                 <h5>Directive that supports recursion</h5>
             </div>
         </div>
-        <div class="row" ng-app="DemoApp" ng-controller="DemoController as Ctrl">
+        <hr class="my-2">
+        <div class="row">
+            <div class="col-xs-12">
+                <h5>JSON data:</h5>
+                <pre>
+                    <code>
+                        {{jsonData}}
+                    </code>
+                </pre>
+            </div>
+        </div>
+        <hr class="my-2">
+        <div class="row">
             <div class="col-xs-12" ng-if="jsonData">
                 <recursive-repeater json-data="jsonData"></recursive-repeater>
             </div>
