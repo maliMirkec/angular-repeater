@@ -1,0 +1,30 @@
+{
+  "name": "angular-repeater",
+  "version": "1.0.1",
+  "homepage": "https://github.com/maliMirkec/angular-repeater",
+  "authors": [
+    "Silvestar Bistrovic <malimirkeccita@gmail.com>"
+  ],
+  "description": "Directive that could handle recursion.",
+  "main": "angular-repeater.js",
+  "keywords": [
+    "angular",
+    "repeat",
+    "repeater"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-recursion": "^1.0.5"
+  },
+  "devDependencies": {
+    "bootstrap": "v4.0.0-alpha.5"
+  }
+}

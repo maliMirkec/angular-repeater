@@ -1,0 +1,28 @@
+{
+    "boolean-true": true,
+    "boolean-false": false,
+    "string": "This is string.",
+    "array-of-strings": ["This is first string.", "This is second string.", "This is third string."],
+    "integer-negative": -1,
+    "integer-zero": 0,
+    "integer-positive": 1,
+    "array-of-integers": [-1, 0, 1],
+    "float-negative": -1.01,
+    "float-zero": 0.00,
+    "float-positive": 1.01,
+    "array-of-floats": [-1.01, 0, 1.01],
+    "object": {
+        "label": "This is label",
+        "value": 100
+    },
+    "array-of-objects": [{
+        "label": "This is first label",
+        "value": 100
+    }, {
+        "label": "This is second label",
+        "value": 200
+    }, {
+        "label": "This is third label",
+        "value": 300
+    }]
+}
