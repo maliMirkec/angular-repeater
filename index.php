@@ -12,23 +12,20 @@
         <div class="row">
             <div class="col-xs-12">
                 <h1 class="mb-2">Angular Repeater</h1>
-                <h5>Directive that supports recursion</h5>
+                <p>Directive that supports recursion</p>
             </div>
         </div>
         <hr class="my-2">
         <div class="row">
-            <div class="col-xs-12">
-                <h5>JSON data:</h5>
-                <pre>
-                    <code>
-                        {{jsonData}}
-                    </code>
-                </pre>
+            <div class="col-md-6">
+                <h6>
+                    JSON data: 
+                    <select  class="custom-select" ng-model="myJson" ng-change="ChangeData()"
+                    ng-options="option.label for option in myJsonOptions track by option.url"></select>
+                </h6>
+                <pre><code>{{jsonData | json}}</code></pre>
             </div>
-        </div>
-        <hr class="my-2">
-        <div class="row">
-            <div class="col-xs-12" ng-if="jsonData">
+            <div class="col-md-6" ng-if="jsonData">
                 <recursive-repeater json-data="jsonData"></recursive-repeater>
             </div>
         </div>
