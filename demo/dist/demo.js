@@ -103,10 +103,29 @@ angular.module('Repeater', ['RecursionHelper'])
     		});
     	};
         
-        loadData('/demo/data/dummy2.json')
-        .then(function(data) {
-            $scope.jsonData = data;
-        });
+        $scope.myJsonOptions = [{
+            url: '/demo/data/dummy.json',
+            label: 'Example A'
+        }, {
+            url: '/demo/data/dummy2.json',
+            label: 'Example B'
+        }, {
+            url: '/demo/data/dummy3.json',
+            label: 'Example C'
+        }];
+		
+		$scope.myJson = $scope.myJsonOptions[0];
+        
+        var changeData = function() {
+			loadData($scope.myJson.url)
+	        .then(function(data) {
+	            $scope.jsonData = data;
+	        });
+        };
+        
+        $scope.ChangeData = changeData;
+		
+		changeData();
     });
 
 	angular.module('DemoApp')
