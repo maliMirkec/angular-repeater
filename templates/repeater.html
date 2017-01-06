@@ -1,5 +1,5 @@
 <div>
-	<div ng-if="IsString(jsonData) || IsBool(jsonData) || IsNumber(jsonData)">
+	<div ng-if="!IsObject(jsonData)">
 		<div class="form-group" ng-if="label">
             <label>{{label}}</label>
 			<input class="form-control" type="text" name="{{label}}" value="{{jsonData}}">
