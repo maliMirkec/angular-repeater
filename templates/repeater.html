@@ -1,15 +1,15 @@
 <div>
-	<div ng-if="!IsObject(jsonData)">
-		<div class="form-group" ng-if="label">
-            <label>{{label}}</label>
-			<input class="form-control" type="text" name="{{label}}" value="{{jsonData}}">
-		</div>
-	</div>
-	<div ng-if="IsObject(jsonData)">
-		<div ng-repeat="(objKey, objValue) in jsonData track by objKey">
-			<div ng-init="indexVar = (IsNumber(objKey) && (IsString(objValue) || IsBool(objValue) || IsNumber(objValue))) ? '' : objKey"></div>
-			<div ng-init="label2 = label.length > 0 ? label + '[' + indexVar + ']' : objKey"></div>
-			<recursive-repeater json-data="objValue" label="label2"></recursive-repeater>
-		</div>
-	</div>
+  <div ng-if="!IsObject(jsonData)">
+    <div class="form-group" ng-if="label">
+      <label>{{label}}</label>
+      <input class="form-control" type="text" name="{{label}}" value="{{jsonData}}">
+    </div>
+  </div>
+  <div ng-if="IsObject(jsonData)">
+    <div ng-repeat="(objKey, objValue) in jsonData track by objKey">
+      <div ng-init="indexVar = (IsNumber(objKey) && (!IsObject(objValue))) ? '' : objKey"></div>
+      <div ng-init="label2 = label.length > 0 ? label + '[' + indexVar + ']' : objKey"></div>
+      <recursive-repeater json-data="objValue" label="label2"></recursive-repeater>
+    </div>
+  </div>
 </div>

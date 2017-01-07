@@ -1,4 +1,5 @@
-[{
+[
+  {
     "boolean-true": true,
     "boolean-false": false,
     "string": "This is string.",
@@ -12,17 +13,22 @@
     "float-positive": 1.01,
     "array-of-floats": [-1.01, 0, 1.01],
     "object": {
-        "label": "This is label",
-        "value": 100
+      "label": "This is label",
+      "value": 100
     },
-    "array-of-objects": [{
+    "array-of-objects": [
+      {
         "label": "This is first label",
         "value": 100
-    }, {
+      },
+      {
         "label": "This is second label",
         "value": 200
-    }, {
+      },
+      {
         "label": "This is third label",
         "value": 300
-    }]
-}]
+      }
+    ]
+  }
+]
