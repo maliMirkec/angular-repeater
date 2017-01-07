@@ -1,6 +1,6 @@
 {
   "name": "angular-repeater",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Directive that could handle recursion.",
   "main": "angular-repeater.js",
   "scripts": {
