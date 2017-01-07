@@ -59,14 +59,6 @@ angular.module('Repeater', ['RecursionHelper'])
 			return RecursionHelper.compile(element, function(scope, iElement, iAttrs, controller, transcludeFn){
 				scope.IsObject = angular.isObject;
 				scope.IsNumber = angular.isNumber;
-				scope.IsString = angular.isString;
-				scope.IsArray = angular.isArray;
-
-				var isBool = function(element) {
-					return typeof(element) === "boolean";
-				};
-
-				scope.IsBool = isBool;
             });
 		}
 	};
@@ -104,13 +96,13 @@ angular.module('Repeater', ['RecursionHelper'])
     	};
         
         $scope.myJsonOptions = [{
-            url: '/demo/data/dummy.json',
+            url: './demo/data/dummy.json',
             label: 'Example A'
         }, {
-            url: '/demo/data/dummy2.json',
+            url: './demo/data/dummy2.json',
             label: 'Example B'
         }, {
-            url: '/demo/data/dummy3.json',
+            url: './demo/data/dummy3.json',
             label: 'Example C'
         }];
 		

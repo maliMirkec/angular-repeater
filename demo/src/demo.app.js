@@ -1,7 +1,7 @@
 (function (DemoApp) {
-    'use strict';
+  'use strict';
 
-    DemoApp = angular.module('DemoApp', ['Repeater']);
+  DemoApp = angular.module('DemoApp', ['Repeater']);
 
-    DemoApp.config(function () {});
+  DemoApp.config(function () {});
 }(this));
