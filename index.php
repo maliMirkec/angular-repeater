@@ -30,13 +30,13 @@
       <div class="col-xs-12">
         <h2 class="mb-2">Usage</h2>
         <p>First include Angular Repeater in your project:</p>
-        <pre><code>(function (DemoApp) {
-          'use strict';
+<pre><code>(function (DemoApp) {
+  'use strict';
 
-          DemoApp = angular.module('DemoApp', ['Repeater']);
+  DemoApp = angular.module('DemoApp', ['Repeater']);
 
-          DemoApp.config(function () {});
-        }(this));</code></pre>
+  DemoApp.config(function () {});
+}(this));</code></pre>
         <p>Than call recursive-repeater directive and provide it with an Angular model and label:</p>
         <pre><code>&lt;recursive-repeater json-data="jsonData" label="MyLabel"&gt;&lt;/recursive-repeater&gt;</code></pre>
       </div>
