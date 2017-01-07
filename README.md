@@ -30,4 +30,4 @@ Than call recursive-repeater directive and provide it with an Angular model and 
 https://frontend-developer.xyz/angular-repeater/
 
 ## Guide
-https://silvestarbistrovic.from.hr/en/?p=852&preview=true
+https://silvestarbistrovic.from.hr/en/articles/recursively-includible-angular-directive
