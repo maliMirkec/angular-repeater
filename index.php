@@ -22,7 +22,7 @@
       <div class="col-xs-12">
         <h1 class="mb-2">Angular Repeater</h1>
         <p>Directive that supports recursion</p>
-        <p>If you interested how to use this directive, please read this article: <a href="https://silvestarbistrovic.from.hr/en/?p=852&preview=true">Recursively includible Angular directive</a></p>
+        <p>If you interested how to use this directive, please read this article: <a href="https://silvestarbistrovic.from.hr/en/articles/recursively-includible-angular-directive">Recursively includible Angular directive</a></p>
       </div>
     </div>
     <hr class="my-2">
