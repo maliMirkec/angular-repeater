@@ -26,8 +26,5 @@ Than call recursive-repeater directive and provide it with an Angular model and 
 <recursive-repeater json-data="jsonData" label="MyLabel"></recursive-repeater>
 ```
 
-## Demo
-https://frontend-developer.xyz/angular-repeater/
-
 ## Guide
 https://silvestarbistrovic.from.hr/en/articles/recursively-includible-angular-directive
