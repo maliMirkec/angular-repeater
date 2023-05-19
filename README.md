@@ -27,4 +27,4 @@ Than call recursive-repeater directive and provide it with an Angular model and 
 ```
 
 ## Guide
-https://silvestarbistrovic.from.hr/en/articles/recursively-includible-angular-directive
+https://silvestar.codes/articles/recursively-includible-angular-directive
